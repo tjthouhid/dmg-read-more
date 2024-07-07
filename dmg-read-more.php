@@ -28,3 +28,9 @@ function dmg_read_more_dmg_read_more_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'dmg_read_more_dmg_read_more_block_init' );
+
+
+// Register WP-CLI command.
+if (defined('WP_CLI') && WP_CLI) {
+    require_once __DIR__ . '/class-dmg-read-more-cli.php';
+}
