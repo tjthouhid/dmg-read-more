@@ -15,10 +15,12 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function save() {
+export default function save({ attributes }) {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'DMG Read More – hello from the saved content!' }
-		</p>
-	);
+        <p {...useBlockProps.save()} className="dmg-read-more">
+            <a href={attributes.postLink}>
+                Read More: {attributes.postTitle}
+            </a>
+        </p>
+    );
 }

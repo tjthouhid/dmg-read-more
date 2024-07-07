@@ -4,6 +4,14 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-dmg-read-more-dmg-read-more {
-	border: 1px dotted #f00;
+.dmg-read-more {
+	a {
+		color: #0073aa;
+		text-decoration: none;
+		font-weight: bold;
+		font-style: italic;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

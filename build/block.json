@@ -1,13 +1,27 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "dmg-read-more/dmg-read-more",
+  "name": "dmg/read-more",
   "version": "0.1.0",
-  "title": "DMG Read More",
+  "title": "DMG Read More Link",
   "category": "widgets",
   "icon": "admin-links",
-  "description": "A plugin that adds a custom Gutenberg block for linking to posts and a WP-CLI command for searching posts.",
+  "description": "A block to create a 'Read More' link to a selected post.",
   "example": {},
+  "attributes": {
+    "postId": {
+      "type": "number",
+      "default": 0
+    },
+    "postTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "postLink": {
+      "type": "string",
+      "default": ""
+    }
+  },
   "supports": {
     "html": false
   },
